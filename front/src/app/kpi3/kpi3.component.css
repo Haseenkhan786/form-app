@@ -1,0 +1,48 @@
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+  }
+  
+  th {color: rgb(247, 12, 12);
+    background-color: rgb(231, 236, 153);
+    border: 1px solid rgb(238, 185, 149);
+  }
+  td {
+    border: 1px solid #1519f5;
+  }
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #b2ebe1;
+  }
+
+  button:hover {
+    background-color: #050505;
+  }
+  
+  
+  .nav button:hover {
+    background-color: #240df3ea;
+    color: black;
+  }
+
+
+  button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0080ff;
+  }
+  

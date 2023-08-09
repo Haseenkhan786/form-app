@@ -1,0 +1,49 @@
+div {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  p {
+    font-weight: bold;
+  }
+  
+  p.gender {
+    font-style: italic;
+  }
+  
+  p.fromdate {
+    color: red;
+  }
+  
+  p.todate {
+    color: blue;
+  }
+  
+  p.phone {
+    font-size: 18px;
+  }
+  
+  p.resume {
+    text-align: center;
+  }
+  
+  p.email {
+    text-decoration: underline;
+  }
+  
+
+
+  button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0080ff;
+  }
+  

@@ -1,0 +1,18 @@
+
+
+  <button [routerLink]="['/register']">Back</button>
+
+<div *ngFor="let employee of employees" style="border: 1px solid black; padding: 10px;">
+  <p style="font-weight: bold;">Name: {{ employee.FullName }}</p>
+  <p style="font-style: italic;">Gender: {{ employee.Gender }}</p>
+  <p style="color: red;">Leave date: {{ employee.Leave_date }}</p>
+  <p style="color: blue;">Leave duration: {{ employee.Leave_duration }}</p>
+  <p style="font-size: 18px;">Leave type: {{ employee.Leave_type }}</p>
+  <p style="font-size: 18px;">Manager name: {{ employee.Manager_name }}</p>
+  <p style="font-size: 18px;">Team name: {{ employee.Team_name }}</p>
+  
+  
+</div>
+
+
+

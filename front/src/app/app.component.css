@@ -1,0 +1,32 @@
+
+   .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #969ddd;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgb(238, 0, 0);
+  }
+  
+  a.active {
+    color: #3ffa11;
+  }
+  
+
+  
+ 
+ 
+ 
+
+

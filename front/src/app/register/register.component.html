@@ -1,0 +1,123 @@
+<nav> 
+  <button style=color:#f30de7ea f *ngIf="tableBtn" (click)="showkpi3()">kpi3</button> 
+  <button style=color:#f30de7ea f *ngIf="tableBtn" (click)="showkpi4()">Bar Chart</button> 
+  <button style=color:#f30de7ea f *ngIf="tableBtn" (click)="showkpi6()">Pie Chart</button> 
+  <button style=color:#f30de7ea f *ngIf="tableBtn" (click)="showTable()">View Data</button> 
+</nav>
+ 
+
+
+<div class="container"> 
+
+
+  <form enctype="multipart/form-data" #formData="ngForm" *ngIf="tableData" (ngSubmit)="submitForm()">
+  
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" placeholder="Your name" required minlength="2"
+        pattern="^[^\s]+(\s[^\s]+)?$" #nameInput="ngModel">
+      <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">
+        <div style=color:red *ngIf="nameInput.errors?.['required']">Name is required.</div>
+        <div style=color:red *ngIf="nameInput.errors?.['minlength']">Name must be at least 2 characters long.</div>
+        <div  style=color:red *ngIf="nameInput.errors?.['pattern']">Name should contain one more whitespaces..</div>
+      </div>
+    </div>
+  
+  
+    <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" [(ngModel)]="gender" name="gender" required #genderInput="ngModel">
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <div *ngIf="genderInput.invalid && (genderInput.dirty || genderInput.touched)">
+        <div style=color:red *ngIf="genderInput.errors?.['required']">Gender is required.</div>
+      </div>
+    </div>
+  
+  
+  
+    <div>
+      <label for="fromDate">From Date:</label>
+      <input type="date" id="fromDate" [(ngModel)]="fromDate" name="fromDate" required #fromDateInput="ngModel"
+        (input)="checkfromdate(fromDateInput)">
+      <div *ngIf="fromDateInput.invalid && (fromDateInput.dirty || fromDateInput.touched)">
+        <div style=color:red *ngIf="fromDateInput.errors?.['required']">From Date is required.</div>
+        <div style=color:red *ngIf="fromDateInput.errors?.['pastDate']">From Date cannot be a past date.</div>
+      </div>
+    </div>
+  
+  
+    <div>
+      <label for="toDate">To Date:</label>
+      <input type="date" id="toDate" [(ngModel)]="toDate" name="toDate" required #toDateInput="ngModel"
+        (input)="checkDateValidity(toDateInput)">
+      <div *ngIf="toDateInput.invalid && (toDateInput.dirty || toDateInput.touched)">
+        <div style=color:red *ngIf="toDateInput.errors?.['lessThanFromDate']">To Date cannot be before From Date.</div>
+        <div style=color:red *ngIf="toDateInput.errors?.['required']">To Date is required.</div>
+      </div>
+    </div>
+  
+  
+  
+  
+    <div>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" [(ngModel)]="phone" name="phone" placeholder="Enter Your Phone Number" required pattern="[0-9]{10}" #phoneInput="ngModel">
+      <div *ngIf="phoneInput.invalid && (phoneInput.dirty || phoneInput.touched)">
+        <div style=color:red *ngIf="phoneInput.errors?.['required']">Phone number is required.</div>
+        <div style=color:red *ngIf="phoneInput.errors?.['pattern']"> Please enter a 10-digit number.</div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+    <div>
+      <label for="selectedFile">Upload File:</label>
+      <input type="file" id="selectedFile" [(ngModel)]="selectedFile" (change)="onFileSelected($event)"
+        name="selectedFile" required accept=".pdf,.png" #fileInput="ngModel">
+      <div *ngIf="fileInput.invalid && (fileInput.dirty || fileInput.touched)">
+        <div style=color:red *ngIf="fileInput.errors?.['required']">Please select a file.</div>
+        <div style=color:red *ngIf="fileInput.errors?.['accept']">Invalid file format. Supported formats: PDF, PNG.</div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter Your Email " required
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" #emailInput="ngModel">
+      <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+        <div style=color:red *ngIf="emailInput.errors?.['required']">Email is required.</div>
+        <div style=color:red *ngIf="emailInput.errors?.['pattern']">Invalid email format.</div>
+      </div>
+    </div>
+  
+  
+  
+  
+    <button type="submit" (click)="myFunction()" [disabled]="formData.invalid">Submit</button>
+    <button type="reset">Clear</button>
+  
+  
+  
+  
+  
+  </form>
+
+
+  </div>
+  
+ 
+  
+
+
+
+ 

@@ -1,0 +1,95 @@
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: hwb(31 82% 7% / 0.973);
+  
+ 
+}
+
+/* Style the form labels */
+label {
+  display:block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style the form inputs */
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="file"],
+input[type="email"],
+select,
+button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Style the reset button */
+button[type="reset"] {
+  background-color: #f44336;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+
+ .container {
+  background-image: url(https://img.freepik.com/free-vector/resume-concept-illustration_114360-185.jpg?w=826&t=st=1689106416~exp=1689107016~hmac=876e11e918c724c279d35456b0603858be0a9104c232255a4051e6d84acc1524);
+ 
+
+  background-repeat: no-repeat;
+  background-size:inherit;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+button {
+  background-color: #d7e7cdea;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #050505;
+}
+
+.myFunction {
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.nav button:hover {
+  background-color: #f30de7ea;
+  color: black;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,21 @@
+
+
+<button [routerLink]="['/register']">Back</button>
+
+<div style="margin: 30px">
+   
+    <h2>Table form data</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Leave duration</th>
+      </tr>
+      <tr
+      
+     *ngFor="let employee of kpi3data" style="border: 1px solid black; padding: 10px;">
+
+        <td>{{ employee.FullName }}</td>
+        <td>{{ employee.Leave_duration }}</td>
+    
+      </tr>
+    </table>

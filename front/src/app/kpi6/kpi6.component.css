@@ -1,0 +1,32 @@
+ #divChart{
+    display: block;
+    width: 500px;
+    height: 500px;
+} 
+
+
+button:hover {
+    background-color: #050505;
+  }
+  
+  
+  .nav button:hover {
+    background-color: #f30de7ea;
+    color: black;
+  }
+
+
+  button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0080ff;
+  }
+  
